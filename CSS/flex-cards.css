@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+.container {
+    display: flex;
+    margin-top: 50px;
+    overflow-x: scroll;
+    padding: 40px;
+    background-color: #000;
+}
+.box {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: -1rem 0 3rem #000;
+    min-width: 300px;
+    min-height: 200px;
+    background: #17141d;
+    border-radius: 16px;
+    cursor: pointer;
+    clear:both; 
+    transition: .5s;
+    position: relative;
+}
+.box:not(:first-child) {
+    margin-left: -130px;
+}
+.box:hover, .box:focus-within {
+    transform: translate(0,-1rem);
+}
+.box:not(:first-child):hover {
+    transform: translate(-2rem,-1rem);
+}
+.box:hover + .box {
+    margin-left: -30px;
+}
